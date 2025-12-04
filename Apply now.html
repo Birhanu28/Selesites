@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Apply now </title> 
+  <link rel ="stylesheet" href ="/Style/Apply now.css">  
+  <style> 
+  body { 
+      font-family: sans-serif; 
+      background-color: #E4E4E4; 
+      font-family: sans-serif; 
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; 
+      margin: 0;
+} 
+.Apply { 
+      background-color: white;
+      width: 100%;
+      max-width: 600px;
+      padding: 40px;
+      margin: 40px 20px;
+      border-radius: 1.5em;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+      display: flex;
+      flex-direction: column; 
+      margin-bottom: 20px;
+} 
+h1 { 
+  color: black;
+font-size: 32px;
+text-align: center;
+font-family: 'Courier New', Courier, monospace;
+margin-bottom: 30px; 
+
+}  
+p { 
+  color: #333; 
+      font-size: 21px; 
+      font-weight: bold; 
+      margin-bottom: 8px;
+}
+input, select{ 
+  font-size: 16px;
+  background-color: white; 
+  border: 3px solid#221604; 
+  border-radius: 1em; 
+  color: black; 
+  text-align: center; 
+  font-family: monospace; 
+  padding: 15px 15px; 
+  border-width: 2px;
+      border-color: #aaa;
+} 
+input:focus {
+      border-color: #007bff;
+      outline: none; 
+} 
+#photo { 
+  height: auto;
+      padding: 15px 15px;
+      border-style: dashed; 
+      border-width: 2px;
+      border-color: #aaa;
+      font-size: 14px;
+}   
+input:not([type="file"]) { 
+      font-size: 16px; 
+      height: 50px;
+      padding: 0 15px; 
+      background-color: white; 
+      border: 1px solid #ccc;
+      border-radius: 0.5em; 
+      color: black; 
+      width: 100%; 
+      box-sizing: border-box; 
+      transition: border-color 0.3s; 
+}   
+#p { 
+  display: block; 
+  padding: 20px; 
+  width: 500px; 
+  border-radius: 2em; 
+  cursor: pointer;
+} 
+#box:active { 
+  background-color: white; 
+  color: black;
+}
+#box {   
+  background-color: rgba(255, 30, 45, 1); 
+  border: 4px solid#FF1E2D; 
+  color: white;  
+}  
+#register:active { 
+  background-color: white; 
+  color: black;
+} 
+#register { 
+  margin-top: 41px;
+  background-color: #07D250; 
+  border: 3px solid#07D250; 
+  color: white; 
+}                             
+#radio { 
+  font-size: 24px;  
+  display: flex; 
+}  
+  </style>
+</head>
+<body> 
+
+  <div class="Apply"> 
+  <h1> Apply now ! </h1> 
+  <form id="myForm" action="/upload-image-endpoint" method="post" enctype="multipart/form-data"> 
+  <p> First name : <input type ="text" placeholder="Enter first name" required>
+  </p> 
+  <p> Last name : <input type ="text" placeholder="Enter Last name" required>
+  </p> 
+  <p> your Age : <input type ="number" placeholder ="Enter your Age" required>
+  </p>  
+  <p ID ="radio"> Gender <input type ="radio" name ="E name" ID name ="E ID" required> MALE 
+<input type ="radio" name ="E name" ID name ="E ID" required> FEMALE 
+</P>
+<p> E-mail : <input type ="email" placeholder ="Enter your E-mail" required>
+</p>  
+<p> Password : <input type ="password" placeholder="Enter Password" required></p>
+<p> Phone no_ : <input type ="tel" placeholder ="+251OOO-OOO-OOO">
+</p> 
+<p> Photo : <input type="file" name="user_photo"accept="image/*"
+required
+title="Select a photo to upload"
+aria-label="Upload Photo" ID ="photo" placeholder="Upload photo"> 
+<p> Date of birth :<input type ="Date" placeholder ="dd/mm/yy"></p> 
+<p> National ID Number : <input type ="text" placeholder ="Enter National ID Number" required></p>
+    
+  <p> Country : <input type ="text" value ="Ethiopia" required></p>
+    
+  <p> Region : <input type ="text" value ="Amhara" required></p>
+    
+  <p> Sub-city : <input type ="text" placeholder ="Enter Sub-city/Woreda" required></p>
+    
+  <p> Address : <input type ="text" placeholder ="Enter Kebele/House No." required></p>
+    
+  <p> Grade-level : 
+    <select name="grade-level" required>
+      <option value="" disabled selected>Select Grade</option>
+      <option value="9">Grade 9</option>
+      <option value="10">Grade 10</option>
+      <option value="11">Grade 11</option>
+      <option value="12">Grade 12</option>
+    </select>
+  </p>
+    
+  <p> Educational file : 
+    <input type="file" name="educational_file" accept=".pdf,.doc,.docx,image/*" required> 
+    <p> Payment Method : 
+  <select required value ="Payment Method"> 
+  <option disabled selected value =""> Select here </option> 
+  <option> Telebirr </option> 
+  <option> CBE birr </option> 
+  <option> Mpesa </option>
+  </select>
+  </p>
+  </p>  
+  <p ID ="p"> <input type ="reset" Value ="✖️ Cancel" ID ="box">
+  <br>
+  <input type ="submit" value ="✅ Register" ID ="register">
+  </p> 
+  </div> 
+  </form> 
+  <script> 
+  
+    const form = document.getElementById('myForm'); 
+    
+    
+    form.addEventListener('submit', function(event) {
+        
+        
+        event.preventDefault(); 
+        
+        
+        if (form.checkValidity()) {
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = 'Congratulation you are Submitted Success fully 🎉';
+            
+            
+            messageDiv.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #07D250; color: white; padding: 30px 50px; border-radius: 1em; font-size: 24px; font-weight: bold; z-index: 1000; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); opacity: 0; transition: opacity 0.5s;';
+            
+            
+            document.body.appendChild(messageDiv);
+            
+            
+            setTimeout(() => {
+                messageDiv.style.opacity = '1';
+            }, 50);
+            
+            
+            setTimeout(() => {
+                messageDiv.style.opacity = '0';
+                messageDiv.addEventListener('transitionend', () => messageDiv.remove());
+            }, 3000);
+            
+            
+        } else {
+            
+            console.log("Form is incomplete or invalid.");
+        }
+    }); 
+  </script>
+</body> 
+</html>
+

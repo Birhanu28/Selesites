@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tobbi Audio Generator (Offline)</title>
+<style>
+body {
+  font-family: sans-serif;
+  background-color: #C7C9C9;
+}
+.main {
+  background-color: white;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 50px 50px #B1B8BB;
+  border-radius: 2em;
+  margin: 5% auto;
+  padding: 20px; 
+}
+.h1 { font-size: 70px; text-align: center; color: #22C9FD; }
+.title { font-size: 40px; text-align: center; font-style: italic; }
+p { font-size: 30px; text-align: center; }
+.text { font-size: 30px; text-align: center; }
+.input {
+  border: 3px solid #424248; 
+  border-style: dashed;
+  height: 500px;
+  width: 80%;
+  font-family: monospace;
+  font-size: 21px;
+  border-radius: 2em;
+  padding: 10px;
+  text-align: center;
+}
+.submit {
+  background-color: #12AFFF;
+  color: white; 
+  height: 120px; 
+  margin-top: 20%;
+  width: 60%;
+  border: 3px solid #12AFFF;
+  border-radius: 1em;
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  cursor: pointer;
+}
+.submit:active {  
+  background-color: white; 
+  color: black;
+}
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 22px;
+} 
+.main-1 { 
+  background-color: #462828;
+  border: 2px solid #000;
+  box-shadow: 5px 5px 50px 50px #B1B8BB;
+  height: 500px;
+  border-radius: 10px;
+  margin: 5% auto;
+  padding: 20px;    
+  color: #FF9D1F; 
+  text-align: center; 
+  font-size: 53px; 
+  font-family: sans-serif; 
+  font-weight: bold;
+} 
+a { 
+  color: white;
+}
+</style>
+</head>
+<body>
+<div class="main">
+  <h1 class="h1">Tobbi Audio Generator (Offline)</h1>
+  <h2 class="title">Created by Solomon Atkachew</h2>
+  <p class="p">Generate Audio Instantly — No Internet Required! 
+  </p>
+<p> This website didn't require Internet Connection or any data , but It Needs true browser or Normal browsers can't Generate the audio you must use like Chrome , Edge so on . </p>
+  <div class="text">
+    <input id="textInput" type="text" placeholder="Enter text to speak" class="input"><br>
+    <button class="submit" onclick="generateAudio()">Generate Now!</button>
+  </div> 
+  </div> 
+<div class="main-1">    
+Phone : <a href ="tel:+251703380679"> +251073380679 </a> 
+<br> 
+<br> 
+E-mail : <a href ="mailto: solomonatkachew@gmail.com"> Solomon Atkachew </a>
+</div>
+
+<script>
+function generateAudio() {
+  const text = document.getElementById("textInput").value.trim();
+
+  if (!("speechSynthesis" in window)) {
+    alert("Your browser does not support text-to-speech. Try Chrome or Edge.");
+    return;
+  }
+
+  if (text === "") {
+    alert("Please enter some text first!");
+    return;
+  }
+
+  const speech = new SpeechSynthesisUtterance(text);
+  speech.lang = "en-US"; // Change to "am-ET" for Amharic
+  speech.pitch = 1;
+  speech.rate = 1;
+  speech.volume = 1;
+
+  window.speechSynthesis.cancel(); // Stop any previous speech
+  window.speechSynthesis.speak(speech);
+}
+</script>
+</body>
+</html>

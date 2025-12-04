@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Design </title> 
+  <style> 
+  body { 
+    background-color: #142d4f; 
+    display: block;
+  } 
+  .beauty { 
+    margin-left: 31px; 
+    background-color: yellow; 
+    width: 850px; 
+    height: 1600px; 
+    margin-top: 21px;
+    border-radius: 4em; 
+    border: 3px solid#252844; 
+    background-image :linear-gradient(to top,#95D3FF,#60B6FE,#2D8AFF);
+  } 
+  .cam { 
+    height: 380px; 
+    width: 240px; 
+    background-color: black; 
+    border-radius: 3em; 
+    margin-left: 26px; 
+    margin-top: 41px;
+  } 
+  .button { 
+    width: 90px; 
+    height: 90px; 
+    border-radius: 14em; 
+    background-color:#142D4F; 
+    border: 3px solid#EFF6FF; 
+    margin-left: 18px; 
+    margin-top: 21px;
+  } 
+  p { 
+    color: white; 
+    font-family: Monospace; 
+    margin-left: 14px; 
+    margin-top: 41px;
+    font-size: 41px; 
+     writing-mode: vertical-lr; 
+     margin-left: 160px; 
+     margin-top: -200px;
+  } 
+  .P { 
+    height: 160px; 
+    margin-top: -121px;
+    width: 150px; 
+    border-radius: 5em; 
+    margin-left: 300px; 
+    background-color: #2779FFD6; 
+    border: 20px solid#42B4FF;  
+  } 
+  .spe { 
+     background-color: #050405; 
+     height: 141px; 
+     width: 37px; 
+     border-radius: 2em; 
+     margin-left: 60px; 
+     margin-top: 54vh; 
+     color: white; 
+     line-height: 21px; 
+     margin-left: 39px;
+       } 
+       h2{ 
+         margin-left: 12px; 
+         font-size: 91px;
+       } 
+       
+       h3 { 
+         color: white; 
+         font-size: 99px; 
+         font-family: cursive; 
+    writing-mode: vertical-lr;
+         margin-top: -10vh;
+    animation-iteration-count: 1; 
+       animation-name: AnimateBg; 
+      animation-delay: 2s;
+     animation-duration: 8s; 
+       }     
+       @keyframes AnimateBg{ 
+         from { 
+           opacity: 0;
+         }
+         to { 
+          opacity: 1; 
+         }
+       }
+      .internal { 
+        height: 42px; 
+        width: 42px; 
+        border-radius: 14em; 
+       background-color: #00062F;
+       border: 3px solid#FFFFFF; 
+       justify-content: center; 
+       align-items: center; 
+       margin-left: 21px; 
+       margin-top: 21px; 
+       background-image: linear-gradient(to right,#284F23,#E0F5DD,#0E4F05);
+      }  
+      .screen-camera { 
+        margin-left: 50%; 
+        margin-top: 5%;
+        height: 50px; 
+        width: 50px; 
+        justify-content: center;
+        border-radius: 14em; 
+        background-image: linear-gradient(to right , #9A9696,#A89E9E,#A8A3A3); 
+        animation-name: Cam; 
+        animation-delay: 4s; 
+    animation-duration: 8s; 
+    animation-iteration-count: infinite;
+      } 
+      @keyframes Cam { 
+        from { 
+          
+        } 
+        to { 
+          background-image: linear-gradient(to right , #BBAEAE,#FFFFFF);
+        }
+      }
+      .beauty-2 { 
+        margin-left: 31px; 
+    background-color: black; 
+    width: 850px; 
+    height: 1600px; 
+    margin-top: 21px;
+    border-radius: 4em; 
+    border: 3px solid#FFFFFF; 
+    animation: ease-out;
+    animation-name: AnimBg; 
+    animation-delay: 4s; 
+    animation-duration: 8s; 
+    animation-iteration-count: infinite;  
+    
+  }   
+  #h4 { 
+        font-size: 460px; 
+        color: white; 
+        margin-top: 30%;
+        font-weight: 500; 
+        font-family: cursive; 
+        text-align: center; 
+        font-style: dashed;
+        animation-name: Erm; 
+    animation-delay: 4s; 
+    animation-duration: 8s; 
+    animation-iteration-count: infinite;
+      } 
+  @keyframes AnimBg { 
+    from { 
+      opacity: 0.8; 
+      background-color: rgba(255, 0, 0, 1);
+    } 
+    to { 
+      opacity: 1;  
+      background-color: rgba(255, 0, 0, 1);
+    }
+  }
+      } 
+  </style>
+</head>
+
+<body>
+  <div class="beauty"> 
+  <div class="cam">  
+  <div class="button"> 
+  <div class="internal"></div>
+  </div> 
+  <div class="button"> 
+  <div class="internal"></div>
+  </div>      
+  <div class="button"> 
+  <div class="internal"></div>
+  </div> 
+  <div class="e"> 
+  </div>
+  <p> AI Cam</p> 
+  <div class="P" id ="btn"></div>
+  </div>  
+  <div class="spe"> <h2> .<br>.
+  <br>.<br>. 
+  </h2> 
+  </div> 
+  <h3> 
+  itel  
+  </h3>
+  </div> 
+  <br>
+  <div class="beauty-2"> 
+  <nav class="screen-camera">
+    
+  </nav>  
+  <h4 ID ="h4"> itel </h4> 
+  </div> 
+  <script> 
+  document.getElementById("btn").onclick = function() { alert("Here you Go the Java Script !")}
+  </script> 
+</body> 
+
+</html>       
+<style> 
+ @keyframes Erm { 
+    from { 
+      opacity: 0.1; 
+    } 
+    to { 
+      opacity: 1;  
+      color: #F8FEFF;
+    }
+  }
+      }
+</style> 
